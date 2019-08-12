@@ -10,15 +10,9 @@ MODEL_XML_PATH = os.path.join('panda/panda_mjcf', 'panda.xml')
 class PandaReachEnv(panda_env.PandaEnv, utils.EzPickle):
     def __init__(self, reward_type='sparse'):
         initial_qpos = {
-            'panda_joint1': 0.4049,
-            'panda_joint2': 0.48,
-            'panda_joint3': 0.0,
-            'panda_joint4': 0.4049,
-            'panda_joint5': 0.48,
-            'panda_joint6': 0.0,
-            'panda_joint7': 0.0,
-            'panda_finger_joint1': 0.0,
-            'panda_finger_joint2': 0.0,
+            'robot0:slide0': 0.4049,
+            'robot0:slide1': 0.48,
+            'robot0:slide2': 0.0,
         }
         panda_env.PandaEnv.__init__(
             self, MODEL_XML_PATH, has_object=False, block_gripper=True, n_substeps=20,
