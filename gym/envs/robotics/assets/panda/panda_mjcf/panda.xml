@@ -1,7 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <mujoco model="panda">
-    <compiler angle="radian" />
-   
-
+    <compiler angle="radian" coordinate="local"></compiler>
+    <option timestep="0.002">
+	<flag warmstart="enable"></flag>
+    </option>
     <size njmax="500" nconmax="100" />
     <asset>
         <mesh name="link0" file="link0.stl" />
